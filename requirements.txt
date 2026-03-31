@@ -1,5 +1,5 @@
 ccxt==4.3.48
-pandas==2.2.2
+pandas>=2.2.3
 pandas-ta==0.3.14b
-numpy==1.26.4
+numpy>=1.26.4
 requests==2.32.3
