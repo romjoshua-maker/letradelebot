@@ -1,0 +1,11 @@
+services:
+  - type: worker
+    name: confluence-signal-bot
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python signal_bot.py
+    envVars:
+      - key: TELEGRAM_TOKEN
+        sync: false
+      - key: TELEGRAM_CHAT_ID
+        sync: false
