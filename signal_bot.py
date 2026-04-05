@@ -96,9 +96,12 @@ def add_indicators(df: pd.DataFrame) -> pd.DataFrame:
     df["macd_hist"]   = macd["MACDh_12_26_9"]
 
     bb = ta.bbands(df["close"], length=20, std=2)
-    df["bb_upper"] = bb["BBU_20_2.0"]
-    df["bb_lower"] = bb["BBL_20_2.0"]
-    df["bb_mid"]   = bb["BBM_20_2.0"]
+    bb_col_upper = [c for c in bb.columns if c.startswith("BBU")][0]
+    bb_col_lower = [c for c in bb.columns if c.startswith("BBL")][0]
+    bb_col_mid   = [c for c in bb.columns if c.startswith("BBM")][0]
+    df["bb_upper"] = bb[bb_col_upper]
+    df["bb_lower"] = bb[bb_col_lower]
+    df["bb_mid"]   = bb[bb_col_mid]
 
     stoch = ta.stoch(df["high"], df["low"], df["close"], k=14, d=3)
     df["stoch_k"] = stoch["STOCHk_14_3_3"]
