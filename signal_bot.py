@@ -4,6 +4,7 @@ BTC / ETH / SOL — 1h + 4h
 Sends Telegram alerts on high-quality setups
 """
 
+import os
 import ccxt
 import pandas as pd
 import pandas_ta as ta
