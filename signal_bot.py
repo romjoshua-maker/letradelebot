@@ -17,7 +17,7 @@ from datetime import datetime
 #  CONFIG — שנה כאן
 # ═══════════════════════════════════════════════════════════
 
-TELEGRAM_TOKEN   = "8570833219:AAFU-QGrkx4ceHhe8QANWMmRNxCQPUNi_9k"    # ← הכנס טוקן הבוט
+TELEGRAM_TOKEN   = "8570833219:AAECREqZ-j15RJBvbpdKQbfHO7jC9NU_dO0"    # ← הכנס טוקן הבוט
 TELEGRAM_CHAT_ID = "569829841"      # ← הכנס Chat ID שלך
 
 SYMBOLS          = ["BTC/USDT", "ETH/USDT", "SOL/USDT"]
