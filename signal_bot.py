@@ -17,8 +17,8 @@ from datetime import datetime
 #  CONFIG — שנה כאן
 # ═══════════════════════════════════════════════════════════
 
-TELEGRAM_TOKEN   = "8570833219:AAECREqZ-j15RJBvbpdKQbfHO7jC9NU_dO0"    # ← הכנס טוקן הבוט
-TELEGRAM_CHAT_ID = "569829841"      # ← הכנס Chat ID שלך
+TELEGRAM_TOKEN   = os.environ.get("TELEGRAM_TOKEN", "")
+TELEGRAM_CHAT_ID = os.environ.get("TELEGRAM_CHAT_ID", "")
 
 SYMBOLS          = ["BTC/USDT", "ETH/USDT", "SOL/USDT"]
 MIN_SCORE        = 5          # מינימום ציון מתוך 8 לשליחת סיגנל
